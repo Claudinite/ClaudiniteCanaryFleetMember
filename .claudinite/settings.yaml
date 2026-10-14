@@ -1,0 +1,15 @@
+engine:
+  channel: "staging"
+  version: "1.61014.2"
+  manifest: "sha512-95gKLETpfQVkZj/gXVx0+sorJuMdvnuPkKyh/k9bymYsoJ41noIrsb9u40hqUzilGWvnz1NPlqPBXdFbFXu0Ag=="
+packs:
+  channel: "canary"
+  declared:
+    - "basics"
+    - "claudinite"
+    - "git-github"
+  manager:
+    repo: "Claudinite/ClaudiniteCanaryFleetManager"
+tasks:
+  frequency:
+    "engine/update": "daily"
