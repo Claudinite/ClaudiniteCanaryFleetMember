@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "generated": "2026-10-15T07:37:19.973Z",
+  "foldedThrough": null,
+  "runsFoldedThrough": "2026-10-15T07:35:34Z",
+  "queueFoldedThrough": null,
+  "minuteRate": null,
+  "fields": {
+    "hour": ["runs","jobs","minutesBilled","spend","apiCalls","list","ask","repair","drain","pick","claim","code-work","hand-off","converge"],
+    "day": ["runs","jobs","minutesBilled","spend","apiCalls","list","ask","repair","drain","pick","claim","code-work","hand-off","converge"],
+    "week": ["days","runs","jobs","minutesBilled","spend","apiCalls","list","ask","repair","drain","pick","claim","code-work","hand-off","converge"],
+    "workflows": ["runs","jobs","minutesBilled","spend"],
+    "runCosts": ["apiCalls","list","ask","repair","drain","pick","claim","code-work","hand-off","converge"],
+    "queue": ["done","delivered","obsolete","none"],
+    "parks": ["failure","action","decision","approval"],
+    "latency": ["tickToItemMinutes","itemToPickMinutes","pickToHandOffMinutes","handOffToConvergeMinutes"]
+  },
+  "hours": {
+    "2026-10-15T07": {"totals":[1,3,2,null,58,1309,8797,0,7158,null,null,null,null,null],"workflows":{"scheduler":[1,3,2,null]},"runCosts":{"38699789484":[58,1309,8797,0,7158,null,null,null,null,null]}}
+  },
+  "days": {
+    "2026-10-15": {"totals":[1,3,2,null,58,1309,8797,0,7158,null,null,null,null,null],"workflows":{"scheduler":[1,3,2,null]},"runCosts":{"38699789484":[58,1309,8797,0,7158,null,null,null,null,null]}}
+  },
+  "weeks": {}
+}
