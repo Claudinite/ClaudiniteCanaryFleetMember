@@ -1,10 +1,10 @@
 {
   "version": 4,
-  "generated": "2026-10-15T07:37:19.973Z",
-  "foldedThrough": "2026-10-14",
-  "runsFoldedThrough": "2026-10-15T07:35:34Z",
-  "queueFoldedThrough": null,
-  "prsFoldedThrough": "2026-10-15T04:50:15Z",
+  "generated": "2026-10-16T07:22:45.364Z",
+  "foldedThrough": "2026-10-15",
+  "runsFoldedThrough": "2026-10-16T07:21:57Z",
+  "queueFoldedThrough": "2026-10-15T07:38:19Z",
+  "prsFoldedThrough": "2026-10-15T07:37:51Z",
   "fields": {
     "day": ["captures","merges","sessions","userMessages","userCommands","tokensIn","tokensOut","tokenSessions","commits","linesAdded","linesRemoved","releases","humanSeconds","agentSeconds"],
     "week": ["days","captures","merges","sessionDays","userMessages","userCommands","tokensIn","tokensOut","tokenSessions","commits","linesAdded","linesRemoved","releases","humanSeconds","agentSeconds"],
@@ -29,10 +29,11 @@
     "humanSeconds": 600
   },
   "hours": {
-    "2026-10-15T07": {"totals":[1,0,0,0]}
+    "2026-10-15T07": {"totals":[1,1,0,0]},
+    "2026-10-15T18": {"totals":[1,0,0,0]},
+    "2026-10-16T07": {"totals":[1,0,0,0]}
   },
   "days": {
-    "2026-09-16": {"totals":[0,0,0,0,0,null,null,null,0,0,0,0,null,null]},
     "2026-09-17": {"totals":[0,0,0,0,0,null,null,null,0,0,0,0,null,null]},
     "2026-09-18": {"totals":[0,0,0,0,0,null,null,null,0,0,0,0,null,null]},
     "2026-09-19": {"totals":[0,0,0,0,0,null,null,null,0,0,0,0,null,null]},
@@ -61,13 +62,14 @@
     "2026-10-12": {"totals":[0,0,0,0,0,null,null,null,0,0,0,0,null,null]},
     "2026-10-13": {"totals":[0,0,0,0,0,null,null,null,0,0,0,0,null,null]},
     "2026-10-14": {"totals":[0,0,0,0,0,null,null,null,2,5782,0,0,null,null],"prs":{"2":[0,null,null],"3":[0,null,null]}},
-    "2026-10-15": {"totals":[0,0,0,0,0,null,null,null,1,6,6,0,null,null],"prs":{"5":[0,null,null]}}
+    "2026-10-15": {"totals":[0,0,0,0,0,null,null,null,2,104,6,0,null,null],"queue":{"engine/update":[1,0,0,0],"engine/usage-fold":[1,0,0,0]},"prs":{"5":[0,null,null],"15":[0,null,null]},"parks":{"engine/update":[0,0,0,0],"engine/usage-fold":[0,0,0,0]}},
+    "2026-10-16": {"totals":[0,0,0,0,0,null,null,null,0,0,0,0,null,null]}
   },
   "weeks": {
     "2026-W38": {"totals":[5,0,0,0,0,0,null,null,null,0,0,0,0,null,null]},
     "2026-W39": {"totals":[7,0,0,0,0,0,null,null,null,0,0,0,0,null,null]},
     "2026-W40": {"totals":[7,0,0,0,0,0,null,null,null,0,0,0,0,null,null]},
     "2026-W41": {"totals":[7,0,0,0,0,0,null,null,null,1,1,0,0,null,null]},
-    "2026-W42": {"totals":[3,0,0,0,0,0,null,null,null,2,5782,0,0,null,null],"prs":{"2":[0,null,null],"3":[0,null,null]}}
+    "2026-W42": {"totals":[4,0,0,0,0,0,null,null,null,4,5886,6,0,null,null],"queue":{"engine/update":[1,0,0,0],"engine/usage-fold":[1,0,0,0]},"prs":{"2":[0,null,null],"3":[0,null,null],"5":[0,null,null],"15":[0,null,null]},"parks":{"engine/update":[0,0,0,0],"engine/usage-fold":[0,0,0,0]}}
   }
 }
