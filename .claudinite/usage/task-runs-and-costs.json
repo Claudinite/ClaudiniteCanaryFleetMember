@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "generated": "2026-10-16T07:22:45.364Z",
-  "foldedThrough": "2026-10-15",
-  "runsFoldedThrough": "2026-10-16T07:21:57Z",
-  "queueFoldedThrough": "2026-10-15T07:38:19Z",
+  "generated": "2026-10-17T07:04:50.318Z",
+  "foldedThrough": "2026-10-16",
+  "runsFoldedThrough": "2026-10-17T07:03:56Z",
+  "queueFoldedThrough": "2026-10-17T07:04:45Z",
   "minuteRate": null,
   "fields": {
     "hour": ["runs","jobs","minutesBilled","spend","apiCalls","list","ask","repair","drain","pick","claim","code-work","hand-off","converge"],
@@ -18,13 +18,16 @@
   "hours": {
     "2026-10-15T07": {"totals":[2,5,5,null,275,1309,8797,0,7158,2915,21970,11657,27496,19884],"workflows":{"executor":[1,2,3,null],"scheduler":[1,3,2,null]},"runCosts":{"38699789484":[58,1309,8797,0,7158,null,null,null,null,null],"38699850398":[217,null,null,null,null,2915,21970,11657,27496,19884]}},
     "2026-10-15T18": {"totals":[1,3,1,null,5,1479,340,0,361,null,null,null,null,null],"workflows":{"scheduler":[1,3,1,null]},"runCosts":{"38785465042":[5,1479,340,0,361,null,null,null,null,null]}},
-    "2026-10-16T07": {"totals":[1,3,2,null,39,1579,1663,0,9668,null,null,null,null,null],"workflows":{"scheduler":[1,3,2,null]},"runCosts":{"38866745105":[39,1579,1663,0,9668,null,null,null,null,null]}}
+    "2026-10-16T07": {"totals":[2,5,4,null,132,1579,1663,0,9668,797,6914,11097,null,3404],"workflows":{"executor":[1,2,2,null],"scheduler":[1,3,2,null]},"runCosts":{"38866745105":[39,1579,1663,0,9668,null,null,null,null,null],"38866795117":[93,null,null,null,null,797,6914,11097,null,3404]}},
+    "2026-10-16T18": {"totals":[1,3,1,null,8,1418,4048,0,330,null,null,null,null,null],"workflows":{"scheduler":[1,3,1,null]},"runCosts":{"38945555532":[8,1418,4048,0,330,null,null,null,null,null]}},
+    "2026-10-17T07": {"totals":[1,3,2,null,40,1084,4770,0,8807,null,null,null,null,null],"workflows":{"scheduler":[1,3,2,null]},"runCosts":{"39012236432":[40,1084,4770,0,8807,null,null,null,null,null]}}
   },
   "days": {
     "2026-10-15": {"totals":[3,8,6,null,280,2788,9137,0,7519,2915,21970,11657,27496,19884],"workflows":{"executor":[1,2,3,null],"scheduler":[2,6,3,null]},"runCosts":{"38699789484":[58,1309,8797,0,7158,null,null,null,null,null],"38699850398":[217,null,null,null,null,2915,21970,11657,27496,19884],"38785465042":[5,1479,340,0,361,null,null,null,null,null]},"queue":{"engine/update":[1,null,null,null],"engine/usage-fold":[1,null,null,null]},"latency":{"13":[null,2,null,null],"14":[null,1,null,null]}},
-    "2026-10-16": {"totals":[1,3,2,null,39,1579,1663,0,9668,null,null,null,null,null],"workflows":{"scheduler":[1,3,2,null]},"runCosts":{"38866745105":[39,1579,1663,0,9668,null,null,null,null,null]}}
+    "2026-10-16": {"totals":[3,8,5,null,140,2997,5711,0,9998,797,6914,11097,null,3404],"workflows":{"executor":[1,2,2,null],"scheduler":[2,6,3,null]},"runCosts":{"38866745105":[39,1579,1663,0,9668,null,null,null,null,null],"38866795117":[93,null,null,null,null,797,6914,11097,null,3404],"38945555532":[8,1418,4048,0,330,null,null,null,null,null]},"queue":{"engine/update":[1,null,null,null],"engine/usage-fold":[1,null,null,null]},"latency":{"16":[null,1,null,null],"17":[null,0,null,null]}},
+    "2026-10-17": {"totals":[1,3,2,null,40,1084,4770,0,8807,null,null,null,null,null],"workflows":{"scheduler":[1,3,2,null]},"runCosts":{"39012236432":[40,1084,4770,0,8807,null,null,null,null,null]},"queue":{"engine/update":[1,null,null,null]},"latency":{"19":[0,0,null,null]}}
   },
   "weeks": {
-    "2026-W42": {"totals":[1,3,8,6,null,280,2788,9137,0,7519,2915,21970,11657,27496,19884],"workflows":{"executor":[1,2,3,null],"scheduler":[2,6,3,null]},"queue":{"engine/update":[1,null,null,null],"engine/usage-fold":[1,null,null,null]},"latency":{"13":[null,2,null,null],"14":[null,1,null,null]}}
+    "2026-W42": {"totals":[2,6,16,11,null,420,5785,14848,0,17517,3712,28884,22754,27496,23288],"workflows":{"executor":[2,4,5,null],"scheduler":[4,12,6,null]},"queue":{"engine/update":[2,null,null,null],"engine/usage-fold":[2,null,null,null]},"latency":{"13":[null,2,null,null],"14":[null,1,null,null],"16":[null,1,null,null],"17":[null,0,null,null]}}
   }
 }
