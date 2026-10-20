@@ -9,7 +9,7 @@ packs:
     - "claudinite"
     - "git-github"
   manager:
-    repo: "Claudinite/ClaudiniteCanaryFleetManager"
+    repo: "ClaudiniteCanaries/FleetManager"
 tasks:
   frequency:
     "engine/update": "daily"
