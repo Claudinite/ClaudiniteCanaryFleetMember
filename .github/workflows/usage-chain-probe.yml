@@ -1,0 +1,61 @@
+# Temporary probe: proves a fold can chain through Actions artifacts.
+# Each run finds the newest artifact uploaded by this workflow on this
+# branch, bumps its counter and uploads the result. Removed after the probe.
+name: usage-chain-probe
+
+on:
+  push:
+    branches: [claude/project-thread-y8avmx]
+    paths: [.github/workflows/usage-chain-probe.yml, probe-trigger.txt]
+
+permissions: {}
+
+jobs:
+  fold:
+    runs-on: ubuntu-24.04
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - name: find and read the previous fold
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          mkdir -p state
+          gh api "repos/$REPO/actions/artifacts?name=usage-chain-probe&per_page=20" > list.json
+          jq -r '.artifacts[] | select(.expired == false) | "\(.id) \(.workflow_run.id) \(.workflow_run.head_branch)"' list.json > candidates.txt
+          echo "candidates:"; cat candidates.txt
+          found=""
+          while read -r id run branch; do
+            [ "$branch" = "$BRANCH" ] || { echo "skip $id: branch $branch"; continue; }
+            path=$(gh api "repos/$REPO/actions/runs/$run" --jq .path)
+            [ "$path" = ".github/workflows/usage-chain-probe.yml" ] || { echo "skip $id: workflow $path"; continue; }
+            found=$id; break
+          done < candidates.txt
+          if [ -n "$found" ]; then
+            gh api "repos/$REPO/actions/artifacts/$found/zip" > prev.zip
+            unzip -o prev.zip -d state
+            echo "PATH-RAN: chained from artifact $found"
+          else
+            echo '{"n":0,"runs":[]}' > state/state.json
+            echo "PATH-RAN: seeded, no previous artifact"
+          fi
+          jq --arg r "$GITHUB_RUN_ID" '.n += 1 | .runs += [$r]' state/state.json > next.json
+          mv next.json state/state.json
+          cat state/state.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: usage-chain-probe
+          path: state/state.json
+          retention-days: 1
+      - name: keep the newest two
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          gh api "repos/$REPO/actions/artifacts?name=usage-chain-probe&per_page=20" --jq '.artifacts[2:][] | .id' | while read -r id; do
+            gh api -X DELETE "repos/$REPO/actions/artifacts/$id" && echo "deleted $id"
+          done
