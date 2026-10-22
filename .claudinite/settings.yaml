@@ -15,4 +15,4 @@ tasks:
   frequency:
     "engine/update": "daily"
   merge:
-    "engine/update": "merge-safe-changes"
+    "engine/update": "merge-any-changes"
